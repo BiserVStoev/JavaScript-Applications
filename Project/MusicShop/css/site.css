@@ -1,0 +1,300 @@
+* {
+    box-sizing: border-box;
+}
+
+input,
+select,
+textarea {
+    max-width: 300px;
+}
+
+.home-image-container{
+    text-align: center;
+}
+
+.home-image-container img{
+    max-height: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.under-nav-addMargin{
+    margin-top: 70px;
+}
+
+.home-welcome-message{
+    text-align: center;
+}
+
+.home-welcome-message h1{
+    font-size: 25px;
+}
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    left: 0;
+    background-color: #c0c0c0;
+    text-align: center;
+    width: 100%;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background: #697b80;
+}
+
+td > a:hover {
+    color: #b2c9ef;
+    text-decoration: none;
+}
+.notification {
+    font-size: 1.5em;
+    float: right;
+    color: #ffffff;
+    padding:  0.5em 2em 0.5em 2em;
+    margin: 1em;
+    display: none;
+    position: fixed;
+    top: 10%;
+    right: 0;
+    text-align: center;
+    border-radius: 3px;
+}
+#infoBox {
+    background: #393;
+}
+
+#errorBox {
+    background: #F50;
+}
+
+.titleForm{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    padding: 10px;
+}
+/*view ads css*/
+#searchForm {
+    display: none;
+}
+
+#searchForm div {
+    display: block;
+}
+
+
+.ad-box {
+    padding: 0;
+    width: 300px;
+    height: 348px;
+    border: 1px solid black;
+    text-align: center;
+
+    margin: 20px;
+    /*display: inline-block;*/
+    float: left;
+}
+
+.ad-box div {
+    display: inline-block;
+}
+
+.ad-box img {
+    margin-top: 5px;
+    height:196px;
+    width: auto;
+    max-width: 250px;
+    max-height: 200px;
+}
+
+.ad-control {
+    float: right;
+    border: 1px solid white;
+    background: inherit;
+    width: 1.5em;
+    height: 1.5em;
+    color: white;
+}
+
+.ad-control:hover {
+    color: cadetblue;
+    cursor: pointer;
+
+}
+
+.delete:hover {
+    color: red;
+}
+
+.box-title {
+    width: 300px;
+    height: 65px;
+    background: #333333;
+    color: white;
+    font-size: 1.5em;
+}
+
+#ads {
+    overflow: auto;
+}
+
+.detailed-view{
+    height: auto;
+    width: auto;
+    text-align: center;
+}
+
+.detailed-view img {
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+    border: 1px solid black;
+}
+
+ .ad-details {
+     text-transform: uppercase;
+     text-align: center;
+ }
+
+.ads-container .ad-name{
+    text-align: right;
+}
+
+.detailed-ad-picture {
+    text-align: center;
+}
+
+
+.ads-row {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 1200px) {
+    .ad-name {
+        display: inline-block;
+    }
+
+    .ads-container {
+        text-align: center;
+    }
+}
+
+.user-profile{
+    height: auto;
+    width: auto;
+    text-align: center;
+}
+
+@media (max-width: 476px) {
+    .detailed-btn {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+.messagesWrapper, .compose-message-wrapper {
+    text-align: center;
+}
+
+.messages-nav-container {
+    border-right: 1px solid black;
+    width: 300px;
+}
+
+.messageType {
+    list-style: none;
+}
+
+.msg-btn {
+    display: block;
+    margin-top: 10px;
+}
+
+.input-center {
+    margin: 0 auto;
+}
+
+#mainContainer {
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.viewAds-wrapper {
+    margin: 0 10% 0 7%;
+}
+
+.navbar-nav>li>a {
+    font-size: 12px;
+}
+
+.filter-type {
+    display: inline-block;
+}
+
+.filter-wrapper {
+    padding: 20px;
+}
+
+.filter-submit-btn {
+    display: block;
+}
+
+.filter-title {
+    font-size: 18px;
+}
+
+.secret-wrapper {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#master-secret-label {
+    font-size: 25px;
+}
+
+.send-secret-btn {
+    margin-top: 15px;
+}
+
+.admin-users-wrapper table, .admin-ads-wrapper table {
+    margin: 0 auto;
+}
+
+.admin-users-wrapper th, .admin-users-wrapper td, .admin-ads-wrapper th, .admin-ads-wrapper td {
+    padding: 10px;
+}
+
+.admin-users-wrapper th, .admin-ads-wrapper th{
+    font-size: 18px;
+}
+
+.admin-users-wrapper thead, .detailed-ad-container, .admin-ads-wrapper thead{
+    border-bottom: 3px solid;
+}
+
+.give-admin {
+    margin-top: 10px;
+}
+
+#newComment {
+    display: block;
+}
+
+.comment-wrapper {
+    margin: 15px 0;
+    background-color: yellow;
+    color: black;
+    border: 2px solid grey;
+    border-radius: 7px;
+}

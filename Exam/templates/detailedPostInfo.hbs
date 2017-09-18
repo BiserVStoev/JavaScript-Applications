@@ -1,0 +1,28 @@
+<div class="col thumbnail">
+    <a href="{{url}}">
+        <img src="{{imageUrl}}">
+    </a>
+</div>
+<div class="post-content">
+    <div class="title">
+        <a href="{{url}}">
+            {{title}}
+        </a>
+    </div>
+    <div class="details">
+            <p>{{description}}</p>
+        <div class="info">
+            submitted {{submittedTime}} ago by {{author}}
+        </div>
+        <div class="controls">
+            <ul>
+                {{#if isOwner}}
+                    <li class="action"><a class="editLink" href="#">edit</a></li>
+                    <li class="action"><a class="deleteLink" href="#">delete</a></li>
+                {{/if}}
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="clear"></div>

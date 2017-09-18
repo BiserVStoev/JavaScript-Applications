@@ -1,0 +1,42 @@
+{{> header}}
+<div>
+    <h3 class="user-profile">{{ad.title}} Details</h3>
+    <div class="ads-container">
+        <div class="row ads-row">
+            <div class="col-lg-12 detailed-ad-picture"><strong><img src="{{ad.imageUrl}}" width="400px" /></strong>
+            </div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Title:</strong></div>
+            <div class="col-lg-6">{{ad.title}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Category:</strong></div>
+            <div class="col-lg-6">{{ad.category}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Description</strong></div>
+            <div class="col-lg-6">{{ad.description}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Price:</strong></div>
+            <div class="col-lg-6">{{ad.price}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Published by:</strong></div>
+            <div class="col-lg-6">{{ad.publisher}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Date Published:</strong></div>
+            <div class="col-lg-6">{{ad.datePublished}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <div class="locking-functionality">
+                    <a class="btn btn-lg btn-danger" href="#/admin/ads/delete/:{{ad._id}}">Delete</a>
+                    <a class="btn btn-lg btn-info" href="#/admin/users/:{{ad._acl.creator}}">Creator</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{{> footer}}

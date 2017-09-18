@@ -1,0 +1,14 @@
+{{> header}}
+    <div class="viewAds-wrapper">
+        <h2 class="titleForm">Advertisements</h2>
+        <button id="advancedSearchBtn">Show Advanced Search</button>
+        {{>filterAds}}
+        <div class="row container">
+            {{#each adverts}}
+                {{> adBox}}
+            {{else}}
+                <p>No ads in database</p>
+            {{/each}}
+        </div>
+    </div>
+{{> footer}}

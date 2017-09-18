@@ -1,0 +1,24 @@
+{{> header}}
+<div class="table-responsive">
+    <h2 class="titleForm">My Advertisements</h2>
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+
+        {{#each adverts}}
+            <tr>
+                <td>{{title}}</td>
+                <td>{{price}} €</td>
+                <td>
+                    <a class="button detailsBtn" href="#/details/:{{_id}}">Details</a>
+                    <a class="button editBtn" href="#/editAd/:{{_id}}">Edit</a>
+                    <a class="button delBtn" href="#/deleteAd/:{{_id}}">Delete</a>
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+</div>
+{{> footer}}

@@ -1,0 +1,49 @@
+{{> header}}
+<div class="row col-md-offset-3 col-md-8">
+    <form id="formCreateAd" class="form-horizontal" action="#/newAd" method="post">
+        <h3>Create a new ad</h3>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="title">Title</label>
+            <div class="col-md-10">
+                <input class="form-control" id="title" name="title" type="text" value="" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Category</label>
+            <div class="col-md-10">
+                <select name="category">
+                    <option>Musical Instruments</option>
+                    <option>DJ Equipment</option>
+                    <option>Studio Equipment</option>
+                    <option>HI-FI</option>
+                    <option>Lights</option>
+                    <option>Accessories</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="description">Description</label>
+            <div class="col-md-10">
+                    <textarea class="form-control" id="description" name="description" type="text" rows="4" value=""></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Price</label>
+            <div class="col-md-10">
+                <input class="form-control" type="number" step="0.01" name="price" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Image</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="image" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Create"/>
+            </div>
+        </div>
+    </form>
+</div>
+{{> footer}}

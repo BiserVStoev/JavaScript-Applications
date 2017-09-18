@@ -1,0 +1,27 @@
+{{> header}}
+<div class="admin-ads-wrapper">
+    <h2 class="titleForm">Ads List</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each ads}}
+            <tr>
+                <td>{{title}}</td>
+                <td>{{category}}</td>
+                <td>{{price}}</td>
+                <td>
+                    <a href="#/admin/ads/:{{_id}}">Manage Ad</a>
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
+{{> footer}}

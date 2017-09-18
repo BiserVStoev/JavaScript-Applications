@@ -1,0 +1,7 @@
+<div class="comment-wrapper">
+    <p class="comment-content">{{content}}</p>
+    <span>submitted on {{datePosted}} by {{author}} | </span>
+{{#if isAuthor}}
+    <a href="#/comments/delete/:{{_id}}">delete</a>;
+{{/if}}
+</div>

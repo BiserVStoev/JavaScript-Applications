@@ -1,0 +1,62 @@
+{{> header}}
+<div class="row col-md-offset-3 col-md-8">
+    <form id="formCreateAd" class="form-horizontal" action="#/editAd/:{{advert._id}}" method="post">
+        <h3>Edit advert</h3>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="title">Title</label>
+            <div class="col-md-10">
+                <input class="form-control" id="title" name="title" type="text" value="{{advert.title}}" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Category</label>
+            <div class="col-md-10">
+                <select name="category" id="category">
+                    <option>Musical Instruments</option>
+                    <option>DJ Equipment</option>
+                    <option selected>Studio Equipment</option>
+                    <option>HI-FI</option>
+                    <option>Lights</option>
+                    <option>Accessories</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="description">Description</label>
+            <div class="col-md-10">
+                <textarea class="form-control" id="description" name="description" type="text" rows="4"
+                              required>{{advert.description}}</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="price">Price</label>
+            <div class="col-md-10">
+                <input class="form-control" type="number" step="0.01" name="price" value="{{advert.price}}" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Image</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="image" value="{{advert.imageUrl}}" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="publisher">Publisher</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="publisher" value="{{advert.publisher}}" disabled/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="datePublished">Date Published</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="datePublished" value="{{advert.date}}" disabled/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Edit"/>
+            </div>
+        </div>
+    </form>
+</div>
+{{> footer}}

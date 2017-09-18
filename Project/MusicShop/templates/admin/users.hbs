@@ -1,0 +1,25 @@
+{{> header}}
+<div class="admin-users-wrapper">
+    <h2 class="titleForm">Users List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#each users}}
+                <tr>
+                    <td>{{username}}</td>
+                    <td>{{email}}</td>
+                    <td>
+                        <a href="#/admin/users/:{{_id}}">Manage User</a>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+{{> footer}}

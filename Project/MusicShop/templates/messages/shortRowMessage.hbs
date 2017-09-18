@@ -1,0 +1,13 @@
+<tr>
+    <td>{{topic}}</td>
+    <td>{{combinedName}}</td>
+    <td>{{datePosted}}</td>
+    <td>
+        <a class="btn btn-info btn-lg" href="#/messages/details/:{{_id}}">Details</a>
+        {{#if showingRecieved}}
+            <a class="btn btn-danger btn-lg" href="#/messages/deleteRecieved/:{{_id}}">Delete</a>
+        {{else}}
+            <a class="btn btn-danger btn-lg" href="#/messages/deleteSent/:{{_id}}">Delete</a>
+        {{/if}}
+    </td>
+</tr>

@@ -1,0 +1,26 @@
+<div id="searchForm" class="filter-wrapper">
+    <form action="#/viewAds/filtered" method="post">
+        <div class="filter-type">
+            <h2 class="filter-title">Title</h2>
+            <input class="form-control" type="text" id="filter-name" name="filter-name">
+        </div>
+        <div class="filter-type">
+            <h2 class="filter-title">Select Category</h2>
+            <select id="categoryBrowser" name="category-type" class="form-control">
+                <option value="All advertisements">All advertisements</option>
+                <option value="Musical Instruments">Musical Instruments</option>
+                <option value="DJ Equipment">DJ Equipment</option>
+                <option value="Studio Equipment">Studio Equipment</option>
+                <option value="HI-FI">HI-FI</option>
+                <option value="Lights">Lights</option>
+                <option value="Accessories">Accessories</option>
+            </select>
+        </div>
+        <div class="filter-type">
+            <h2 class="filter-title">Price:</h2>
+            <input class="form-control" type="number" min="0" id="filter-start-price" name="filter-start-price" placeholder="From:">
+            <input class="form-control" type="number" min="0" id="filter-end-price" name="filter-end-price" placeholder="To:">
+        </div>
+        <input type="submit" value="Search" id="searchByCategory" class="filter-submit-btn btn btn-default">
+    </form>
+</div>

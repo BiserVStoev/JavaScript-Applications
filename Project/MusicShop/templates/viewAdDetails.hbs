@@ -1,0 +1,50 @@
+{{> header}}
+<div class="container body-content" id = "{{advert._acl.creator}}">
+
+    <h2 class="ad-details">{{advert.title}}</h2>
+
+    <div class="ad-container detailed-ad-container">
+        <div class="row ads-row">
+            <div class="col-lg-12 detailed-ad-picture"><strong><img src="{{advert.imageUrl}}" width="400px" /></strong>
+            </div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Category:</strong></div>
+            <div class="col-lg-6">{{advert.category}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Price:</strong></div>
+            <div class="col-lg-6">{{advert.price}} euro</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Description:</strong></div>
+            <div class="col-lg-6">{{advert.description}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Published by:</strong></div>
+            <div class="col-lg-6">{{advert.publisher}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Date Published:</strong></div>
+            <div class="col-lg-6">{{advert.date}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <a class="btn btn-lg btn-info" href="#/userProfile/:{{advert._acl.creator}}">Seller Details</a>
+                <a class="btn btn-lg btn-info" href="#/message/:{{advert._acl.creator}}">Contact seller</a>
+            </div>
+        </div>
+    </div>
+    <div class="comments-wrapper">
+        <form action="#/createComment/:{{advert._id}}" method="post">
+            <label for="newComment">Comment</label>
+            <textarea name="newComment" id="newComment" cols="30" rows="10"></textarea>
+            <input type="submit" value="Add Comment">
+        </form>
+
+        {{#each comments}}
+            {{> comment}}
+        {{/each}}
+    </div>
+
+{{> footer}}

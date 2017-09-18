@@ -1,0 +1,39 @@
+{{> header}}
+<div>
+    <h3 class="user-profile">{{user.name}} Profile</h3>
+    <div class="ads-container">
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Username:</strong></div>
+            <div class="col-lg-6">{{user.username}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Name:</strong></div>
+            <div class="col-lg-6">{{user.name}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Phone number:</strong></div>
+            <div class="col-lg-6">{{user.phoneNumber}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Email:</strong></div>
+            <div class="col-lg-6">{{user.email}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Number of ads:</strong></div>
+            <div class="col-lg-6">{{user.adsCount}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <div class="locking-functionality">
+                    <a class="btn btn-lg btn-danger" href="#/admin/users/lock/:{{user._id}}">Lock</a>
+                    <a class="btn btn-lg btn-success" href="#/admin/users/unlock/:{{user._id}}">Unlock</a>
+                </div>
+                {{#if user.isAdmin}}
+                    <a class="btn give-admin btn-danger" href="#/admin/users/removeAdmin/:{{user._id}}">Remove admin privileges</a>
+                {{else}}
+                    <a class="btn give-admin btn-success" href="#/admin/users/makeAdmin/:{{user._id}}">Give admin privileges</a>
+                {{/if}}
+            </div>
+        </div>
+</div>
+{{> footer}}

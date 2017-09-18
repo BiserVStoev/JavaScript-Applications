@@ -1,0 +1,21 @@
+{{> header}}
+<div class="messagesWrapper">
+    <h2 class="messages-title">My Messages</h2>
+    <div class="container container-fluid">
+        <div class="row">
+            <aside class="col-md-3 messages-nav-container">
+                <h3>MusicShop Mail</h3>
+                <ul>
+                    <li class="messageType"><a class="btn btn-lg btn-default msg-btn inbox-btn" href="#/messages/received">Inbox</a></li>
+                    <li class="messageType"><a class="btn btn-lg btn-default msg-btn sent-btn" href="#/messages/sent">Sent Messages</a></li>
+                </ul>
+            </aside>
+            <div class="col-md-7 col-md-offset-1">
+                {{#if messageHasPartial}}
+                    {{> messagesTable}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>
+{{> footer}}

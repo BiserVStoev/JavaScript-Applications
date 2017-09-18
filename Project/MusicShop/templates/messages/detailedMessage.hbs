@@ -1,0 +1,39 @@
+{{>header}}
+<div class="detailed-message-wrapper">
+    <h2 class="ad-details">Message Details</h2>
+
+    <div class="ads-container">
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Topic:</strong></div>
+            <div class="col-lg-6">{{topic}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Description:</strong></div>
+            <div class="col-lg-6">{{description}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Sender:</strong></div>
+            <div class="col-lg-6">{{senderName}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Reciever:</strong></div>
+            <div class="col-lg-6">{{recieverName}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 ad-name"><strong>Date Created:</strong></div>
+            <div class="col-lg-6">{{date}}</div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <a class="btn btn-lg btn-info" href="#/userProfile/:{{senderId}}">Sender Details</a>
+                <a class="btn btn-lg btn-info" href="#/userProfile/:{{recieverId}}">Reciever Details</a>
+            </div>
+        </div>
+        <div class="row ads-row">
+            <div class="col-lg-4 col-lg-offset-4 contact-re">
+                <a class="btn btn-lg btn-primary" href="#/message/{{remessageId}}">Message Again</a>
+            </div>
+        </div>
+    </div>
+</div>
+{{>footer}}
